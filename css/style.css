@@ -31,6 +31,6 @@ body {
   width: 1000px;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto-fit, min-content);
-  outline: none; }
+  outline: none;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
