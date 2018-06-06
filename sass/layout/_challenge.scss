@@ -60,16 +60,27 @@
 //     }
 // }
 
+// .container {
+//   width: 1000px;
+//   margin: 30px auto;
+//   background: #eee;
+//   display: grid;
+//   grid-template-rows: repeat(2, 150px);
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-gap: 30px;
+//   grid-auto-rows: 80px;
+//   grid-auto-flow: row;
+//   grid-auto-columns: .5fr;
+//   align-items: center; // Default: Stretch. Can be: center / end / start
+// }
+
 .container {
   width: 1000px;
+  // height: 1000px;
   margin: 30px auto;
-  background: #eee;
   display: grid;
-  grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  grid-auto-rows: 80px;
-  grid-auto-flow: row;
-  grid-auto-columns: .5fr;
-  align-items: center; // Default: Stretch. Can be: center / end / start
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit, min-content);
+  // border: 1px solid black;
+  outline: none;
 }
