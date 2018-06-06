@@ -1,22 +1,22 @@
 .footer {
-  grid-column: 1 / -1; }
+  grid-column: col-start 1 / grid-end; }
 
 .header {
-  grid-column: 1 / -1; }
+  grid-column: col-start 1 / grid-end; }
 
 .main-content {
-  grid-column: 1 / span 3; }
+  grid-column: col-start 1 / col-end 3; }
 
 .sidebar {
-  grid-column: 4 / -1;
-  grid-row: 2 / span 2; }
+  grid-column: col-end 3 / grid-end;
+  grid-row: box-start / main-end; }
 
 .challenge {
-  width: 1000px;
+  width: 100vw;
   margin: 30px auto;
   display: grid;
-  grid-template-rows: 100px 200px 400px 100px;
-  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-template-rows: [header-start] 200px [header-end box-start] 400px [box-end main-start] 800px [main-end footer-start] 200px [footer-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 400px [grid-end];
   grid-gap: 30px; }
   .challenge > * {
     background: orangered;

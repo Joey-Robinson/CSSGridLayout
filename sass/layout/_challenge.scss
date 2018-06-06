@@ -1,15 +1,75 @@
-.challenge {
+// Method 1: Line Numbers
+// .challenge {
+//   width: 1000px;
+//   margin: 30px auto;
+//   display: grid;
+//   grid-template-rows: 100px 200px 400px 100px;
+//   grid-template-columns: repeat(3, 1fr) 200px;
+//   grid-gap: 30px;
+//     & > * {
+//       background: orangered;
+//       padding: 20px;
+//       color: white;
+//       font-size: 30px;
+//       font-family: sans-serif;
+//     }
+// }
+
+// Method 2: Line Name
+// .challenge {
+  // To Make the content fill the page: x2 1000px, 100px, 200px, 400px, 100px, 200px, grid-gap: 15px
+//   width: 1000px;
+//   margin: 30px auto;
+//   display: grid;
+//   grid-template-rows: 
+//     [header-start] 100px 
+//     [header-end box-start] 200px 
+//     [box-end main-start] 400px 
+//     [main-end footer-start] 100px
+//     [footer-end];
+//   grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+//   grid-gap: 30px;
+//     & > * {
+//       background: orangered;
+//       padding: 20px;
+//       color: white;
+//       font-size: 30px;
+//       font-family: sans-serif;
+//     }
+// }
+
+// Method 3: Grid Ares
+// .challenge {
+//   width: 1000px;
+//   margin: 30px auto;
+//   display: grid;
+//   grid-template-rows: 100px 200px 400px 100px;
+//   grid-template-columns: repeat(3, 1fr) 200px;
+//   grid-gap: 30px;
+//   grid-template-areas: 
+//   "head head head head"
+//   "box  box  box  side"
+//   "main main main side"
+//   "foot foot foot foot";
+//     & > * {
+//       background: orangered;
+//       padding: 20px;
+//       color: white;
+//       font-size: 30px;
+//       font-family: sans-serif;
+//     }
+// }
+
+.container {
   width: 1000px;
   margin: 30px auto;
+  background: #eee;
   display: grid;
-  grid-template-rows: 100px 200px 400px 100px;
-  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-    & > * {
-      background: orangered;
-      padding: 20px;
-      color: white;
-      font-size: 30px;
-      font-family: sans-serif;
-    }
+  grid-auto-rows: 80px;
+  grid-auto-flow: row;
+  grid-auto-columns: .5fr;
+  align-items: center; // Default: Stretch. Can be: center / end / start
 }
