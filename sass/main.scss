@@ -8,5 +8,12 @@
 @import './base/typography';
 @import './base/utilities';
 // Components
+@import './components/footer';
+@import './components/header';
+@import './components/maincontent';
+@import './components/sidebar';
+@import './components/smallbox';
+
 // Layout
+@import './layout/challenge';
 // Pages

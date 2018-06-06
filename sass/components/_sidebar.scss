@@ -1,0 +1,4 @@
+.sidebar {
+  grid-column: 4 / -1; // Try 5 if doesn't work
+  grid-row: 2 / span 2;
+}
